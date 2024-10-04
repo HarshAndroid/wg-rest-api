@@ -87,7 +87,7 @@ You can generate a SHA256 hash token from your password and set it to a variable
 Generate hash:
 
 ```bash
-docker run --rm HarshAndroid/wg-rest-api bin/wgpass password
+docker run --rm leonovk/wg-rest-api bin/wgpass password
 ```
 
 After that, you start the container as usual, but instead of AUTH_TOKEN, you set AUTH_DIGEST_TOKEN to the value you were given.
