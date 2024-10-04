@@ -34,6 +34,16 @@ exit
 To run just run the command:
 
 ```
+git clone https://github.com/HarshAndroid/wg-rest-api.git
+cd wg-rest-api
+docker build -t wg-rest-api .
+```
+
+```
+docker run --rm wg-rest-api bin/wgpass password
+```
+
+```
 docker run -d \
 -e WG_HOST=<🚨YOUR_SERVER_IP> \
 -e AUTH_TOKEN=<🚨YOUR_ADMIN_API_TOKEN> \
@@ -43,7 +53,7 @@ docker run -d \
 -p 3000:3000 \
 --cap-add=NET_ADMIN \
 --restart unless-stopped \
-HarshAndroid/wg-rest-api
+wg-rest-api
 ```
 
 **If you can't start the container, try entering the command in one line**
