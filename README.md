@@ -58,7 +58,26 @@ docker run -d \
 wg-rest-api
 ```
 
-**Wireguard is Up & Running, Make sure port 51820 and 3000 are Open on your Sever**
+**Wireguard is Up & Running, Make sure port 51820 and 3000 are Open on your Server**
+##
+
+### Server Running check
+
+Make a request to the `healthz` care api point in any way convenient for you. For example:
+
+```bash
+http://YOUR_SERVER_IP:3000/healthz
+```
+
+If you received something similar in response, then everything is fine.
+
+```json
+{
+  "status": "ok",
+  "version": "1.8.11"
+}
+```
+
 **If you can't start the container, try entering the command in one line**
 
 ### Settings you can set
