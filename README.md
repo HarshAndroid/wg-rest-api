@@ -39,10 +39,12 @@ cd wg-rest-api
 docker build -t wg-rest-api .
 ```
 
+Generate hash AUTH_TOKEN (You can use any Password):
 ```
 docker run --rm wg-rest-api bin/wgpass password
 ```
 
+Use AUTH_TOKEN Generated in Last Step & Provide you Server IP Address eg. 162.212.153.174
 ```
 docker run -d \
 -e WG_HOST=<🚨YOUR_SERVER_IP> \
@@ -56,6 +58,7 @@ docker run -d \
 wg-rest-api
 ```
 
+**Wireguard is Up & Running, Make sure port 51820 and 3000 are Open on your Sever**
 **If you can't start the container, try entering the command in one line**
 
 ### Settings you can set
